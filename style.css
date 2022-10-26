@@ -7,6 +7,7 @@
 .body__header {
   margin: 0 auto;
 }
+/* Heading */
 .header {
   width: 500px;
   display: block;
@@ -24,32 +25,23 @@
     text-align: center;
   }
 }
-.centered-main-page-element {
-  display: block;
-  width: 500px;
+.body__content {
   margin: 0 auto 0;
 }
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-.task-row-wrapper {
-  display: flex;
+.content {
+  display: block;
+  width: 500px;
 }
 ul {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
+li {
   list-style: none;
 }
-input,
-button {
-  outline: none;
-}
-button {
+.section__add-button,
+.section__edit-button,
+.section__delete-button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,13 +49,15 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
-button:hover {
+.section__add-button:hover,
+.section__edit-button:hover,
+.section__delete-button:hover {
   color: #3a3A3a;
 }
-/* Heading */
-h3,
-label[for="new-task"] {
+/* New Task */
+.section__name {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -72,7 +66,22 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.section__name_add {
+  display: block;
+  margin: 0 0 20px;
+}
+.section__row-wrapper {
+  display: flex;
+}
+.section__task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+.section__task_new-task {
+  width: 318px;
+}
+.section__task_input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -83,20 +92,11 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  outline: none;
 }
-input[type="text"]:focus {
+.section__task_input:focus {
   color: #333;
 }
-
-/* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-input#new-task {
-  width: 318px;
-}
-
 /* Task list */
 li {
   overflow: hidden;
@@ -120,14 +120,14 @@ li > label {
   width: 226px;
 }
 li > input[type="text"] {
- width: 226px;
+  width: 226px;
 }
-button.delete img {
+.section__delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.section__delete-img {
   transform: rotateZ(0);
 }
 
