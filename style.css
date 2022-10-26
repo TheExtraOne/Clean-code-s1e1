@@ -32,30 +32,6 @@
   display: block;
   width: 500px;
 }
-ul {
-  margin: 0;
-  padding: 0px;
-}
-li {
-  list-style: none;
-}
-.section__add-button,
-.section__edit-button,
-.section__delete-button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-  outline: none;
-}
-.section__add-button:hover,
-.section__edit-button:hover,
-.section__delete-button:hover {
-  color: #3a3A3a;
-}
 /* New Task */
 .section__name {
   color: #333;
@@ -97,8 +73,38 @@ li {
 .section__task_input:focus {
   color: #333;
 }
+.section__add-button,
+.section__edit-button,
+.section__delete-button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+.section__add-button:hover,
+.section__edit-button:hover,
+.section__delete-button:hover {
+  color: #3a3A3a;
+}
+.section__delete-img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+.section__delete-img:hover {
+  transform: rotateZ(0);
+}
 /* Task list */
-li {
+.section__list {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+}
+.section__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -106,47 +112,33 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.section__checkbox {
+  margin: 0 10px;
   vertical-align: middle;
 }
-
-li > input[type="checkbox"] {
-  margin: 0 10px;
-}
-li > label {
+.section__task_label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  vertical-align: middle;
 }
-li > input[type="text"] {
+.section__task_invis {
   width: 226px;
+  vertical-align: middle;
+  display: none;
 }
-.section__delete-img {
-  height: 2em;
-  transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
-}
-.section__delete-img {
-  transform: rotateZ(0);
-}
-
 /* Completed */
-ul#completed-tasks label {
+.section__task_line-through {
   text-decoration: line-through;
   color: #888;
 }
-
-/* Edit Task */
-ul li input[type="text"] {
-  display: none;
-}
-
-ul li.editMode input[type="text"] {
+.section__task_block {
   display: inline-block;
   width: 224px;
+  vertical-align: middle;
 }
-
-ul li.editMode label {
+.section__item_invis-label{
   display: none;
+  vertical-align: middle;
 }
